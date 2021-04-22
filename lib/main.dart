@@ -73,7 +73,7 @@ class _HomeState extends State<Home> {
                     child: Text(
                       "Atualizar",
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 26,
                         color: Colors.white,
                       ),
                     ),
