@@ -15,8 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String _valor = "";
-  String _simbolo;
+  String _valor = "Preço de compra";
   _valueBitcoin() async {
     String url = "https://blockchain.info/ticker";
     http.Response retornoBitcoin;
@@ -24,11 +23,10 @@ class _HomeState extends State<Home> {
     Map<String, dynamic> retornoValues = json.decode(retornoBitcoin.body);
     dynamic br = retornoValues["BRL"];
     dynamic precoCompra = br["buy"];
-    dynamic simbolo = br["symbol"];
+
     setState(() {
       //cachorrada, transformando retorno em string
       _valor = precoCompra.toString();
-      _simbolo = simbolo.toString();
     });
   }
 
@@ -55,7 +53,7 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.only(top: 20),
             child: Center(
               child: Text(
-                " ${_simbolo} ${_valor}",
+                " R\$ ${_valor}",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 25,
