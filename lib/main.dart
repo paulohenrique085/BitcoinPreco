@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  String _valor = "Preço de compra";
+  String _valor = "0";
   _valueBitcoin() async {
     String url = "https://blockchain.info/ticker";
     http.Response retornoBitcoin;
@@ -36,7 +36,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Bitcoin"),
+        title: Text("Preço do Bitcoin"),
       ),
       body: Column(
         children: <Widget>[
